@@ -1,0 +1,280 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    font-family: "Space Grotesk", sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+:root {
+    --dark-blue: #220930;
+    --dark-grey: #58505f;
+    --grey: #cfd3d7;
+    --white: #ffffff;
+    --Red: hsl(0, 100%, 66%);
+    --Dark-grayish-violet: hsl(280, 4%, 68%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+    --gradient: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+
+}
+
+#sidebar {
+    width: 25vw;
+    height: 100vh;
+    background-image: url(images/bg-main-desktop.png);
+}
+
+#frontcard {
+    width: 24rem;
+    height: 13rem;
+    background-image: url(images/bg-card-front.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 6rem;
+    margin-top: 5rem;
+    color: var(--white);
+    padding: 1.8rem;
+}
+
+#numbers0 {
+    margin-top: 50px;
+    font-size: 19px;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+#cardfooter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27px;
+}
+
+#name0,
+#expiry0 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#backcard {
+    width: 24rem;
+    height: 13rem;
+    background-image: url(images/bg-card-back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10rem;
+    margin-top: 1.8rem;
+    color: var(--white);
+    padding: 3rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#cvc0 {
+    font-size: 17px;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+#logo {
+    width: 71px;
+    height: auto;
+}
+
+#checkout-form {
+    margin-left: 20rem;
+    width: 320px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+   
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+}
+
+::placeholder {
+    color: var(--Dark-grayish-violet);
+    font-family: space Grotesk;
+    font-weight: 20;
+
+}
+
+.input_text {
+    width: 320px;
+    height: 39px;
+    border-radius: 8px;
+    border: 1px solid var(--grey);
+    text-indent: 10px;
+}
+
+#expirydiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+#expiryinput {
+    flex-basis: 48%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+#expiryinput label {
+    grid-column: 1/span 2;
+}
+
+#expiryinput input {
+    width: 90px;
+    height: 39px;
+}
+
+#expiry-date-year {
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 7px;
+}
+
+#cvcdiv input {
+    width: 120px;
+    height: 39px;
+}
+
+button {
+    width: 100%;
+    background-color: #220930;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--white);
+    border: none;
+    font-family: Space Grotesk;
+}
+
+button:hover {
+    background-color: #57097b;
+}
+
+input:focus-visible {
+    border: none;
+    outline: 1px solid #8f7ee4;
+}
+
+
+#completion {
+    display: none;
+    width: 350px;
+    height: 280px;
+    margin-left: 20rem;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#continue{
+    width: 100%;
+}
+.error input{
+border:  1px solid hsl(0, 100%, 67%);
+
+}
+.error input:focus-visible {
+    border: none;
+    outline: 1px solid  hsl(0, 100%, 67%) ;
+}
+
+.error_msg{
+    margin-top:5px ;
+    color: var(--Red);
+    font-size: 13px;
+
+
+}
+
+@media only screen and (max-width:375px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sidebar {
+        background-image: url(images/bg-main-mobile.png);
+        width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+
+    }
+
+    #frontcard {
+        width: 17rem;
+        height: 9rem;
+        margin: 8rem 0 0 2rem;
+        padding: 1.2rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    #backcard {
+        width: 17rem;
+        height: 9rem;
+        padding: 2rem;
+        margin: 1rem 0 0 4rem;
+        position: absolute;
+        top: 1vh;
+
+    }
+
+    #logo {
+        width: 40px;
+        height: auto;
+    }
+
+    #numbers0 {
+        margin-top: 23px;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: 300;
+    }
+
+    #name0,
+    #expiry0 {
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    #checkout-form {
+        height: 320px;
+        margin-left: 0;
+        margin-top: 4rem;
+    }
+    
+
+    label {
+        font-size: 12px;
+    }
+    #completion{
+        width: 96vw;
+       margin: 25px 0 25px 0;
+    }
+   
+}

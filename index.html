@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div id="sidebar">
+    <div id="frontcard">
+      <img id="logo" src="images/card-logo.svg" alt="">
+      <p id="numbers0">0000 0000 0000 0000</p>
+      <div id="cardfooter">
+        <p id="name0">Hira Shabeer</p>
+        <p id="expiry0">00/00</p>
+      </div>
+    </div>
+
+    <div id="backcard">
+      <p id="cvc0">000</p>
+    </div>
+  </div>
+  <main>
+    <div id="checkout-form">
+      <div id="namediv">
+        <label for="name">CARDHOLDER NAME</label>
+        <input type="text" id="name" class="input_text" placeholder="e.g. Hira Shabeer" autocomplete="username"
+          maxlength="17">
+        <p class="error_msg"></p>
+      </div>
+      <div id="numberdiv">
+        <label for="number">CARD NUMBER</label>
+        <input type="text" id="number" class="input_text" placeholder="e.g. 1234 5678 9123 0000" minlength="16"
+          maxlength="16" autocomplete="off">
+        <p class="error_msg"></p>
+      </div>
+      <div id="expirydiv">
+
+        <div id="expiryinput">
+          <label for="expiry-date">EXP. DATE (MM/YY)</label>
+
+          <input type="text" id="expiry-date" class="input_text" placeholder="MM" minlength="2" maxlength="2"
+            autocomplete="cc-exp-month">
+          <p class="error_msg"></p>
+          <input type="text" id="expiry-date-year" class="input_text" placeholder="YY" minlength="2" maxlength="2">
+          <p class="error_msg"></p>
+        </div>
+
+        <div id="cvcdiv">
+          <label for="cvc">CVC</label>
+          <input type="text" id="cvc" class="input_text" placeholder="e.g. 123" minlength="3" maxlength="3"
+            autocomplete="off" autocomplete="cc-exp-year">
+          <p class="error_msg"></p>
+        </div>
+      </div>
+
+
+
+
+      <button type="submit" id="confirm-button">Confirm</button>
+    </div>
+  </main>
+
+
+
+  <!-- Completed state start -->
+  <div id="completion">
+    <img src="images\icon-complete.svg" alt="completion picture">
+    <h2> Thank you! </h2>
+    <p id="info-added">We've added your card details</p>
+    <button type="button" id="continue">Continue</button>
+    </button>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+
+</html>
